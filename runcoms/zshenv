@@ -21,6 +21,7 @@ export VISUAL=$EDITOR
 
 export LC_CTYPE=en_US.UTF-8
 export BOOST_ROOT=/Users/janneka/src/lib/boost
+export HOMEBREW_GITHUB_API_TOKEN=$(cat ~/.auth/homebrew_git_token)
 
 # pip should only run if there is a virtualenv currently activated
 # export PIP_REQUIRE_VIRTUALENV=true
