@@ -41,4 +41,7 @@ function awse {
 
 fpath=(/usr/local/share/zsh-completions $fpath)
 
+# Custom alias overrides
+alias j='fasd_cd'
+
 ulimit -n 4096
