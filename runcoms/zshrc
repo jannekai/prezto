@@ -15,27 +15,30 @@ setopt AUTO_NAME_DIRS
 setopt AUTO_CD
 
 function awse {
-	if [[ $# == 0 ]]; then
-		unset AWS_ACCESS_KEY_ID
-		unset AWS_SECRET_ACCESS_KEY
-		unset AWS_ENV
-		echo Clearing AWS authentication
-		export AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY AWS_ENV
-	else
-		local KEY_ID=$(parse_aws_credentials.py $1 AWS_ACCESS_KEY_ID)
-		local ACCESS_KEY=$(parse_aws_credentials.py $1 AWS_SECRET_ACCESS_KEY)
+    if [[ $# == 0 ]]; then
+        unset AWS_ACCESS_KEY_ID
+        unset AWS_SECRET_ACCESS_KEY
+        unset AWS_ENV
+        echo Clearing AWS authentication
+        export AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY AWS_ENV
+    else
+        local KEY_ID=$(parse_aws_credentials.py $1 AWS_ACCESS_KEY_ID)
+        local ACCESS_KEY=$(parse_aws_credentials.py $1 AWS_SECRET_ACCESS_KEY)
 
-		if [[ $KEY_ID == "" || $ACCESS_KEY == "" ]]; then
-			echo No aws profile found for env $1 or all credentials not set
-		else
-			AWS_ACCESS_KEY_ID=$KEY_ID
-			AWS_SECRET_ACCESS_KEY=$ACCESS_KEY
-			AWS_ENV=$1
-			echo Setting AWS authentication to env: \"$AWS_ENV\" key_id: \"$AWS_ACCESS_KEY_ID\" access_key: \"$AWS_SECRET_ACCESS_KEY[0,5]...\"
-			export AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY AWS_ENV
-		fi
-	fi
+        if [[ $KEY_ID == "" || $ACCESS_KEY == "" ]]; then
+            echo No aws profile named $1 found or all credentials not set
+        else
+            AWS_ACCESS_KEY_ID=$KEY_ID
+            AWS_SECRET_ACCESS_KEY=$ACCESS_KEY
+            AWS_ENV=$1
+            echo Changed AWS profile to: $AWS_ENV
+            echo key_id: $AWS_ACCESS_KEY_ID
+            echo access_key: $AWS_SECRET_ACCESS_KEY[0,5]...
+            export AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY AWS_ENV
+        fi
+    fi
 }
 
 fpath=(/usr/local/share/zsh-completions $fpath)
 
+ulimit -n 4096
