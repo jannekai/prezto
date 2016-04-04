@@ -43,5 +43,6 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 
 # Custom alias overrides
 alias j='fasd_cd'
+alias rm='nocorrect rm'
 
 ulimit -n 4096
