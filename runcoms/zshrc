@@ -45,4 +45,7 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 alias j='fasd_cd'
 alias rm='nocorrect rm'
 
+# mix test doesn't understand paths
+compdef -d mix
+
 ulimit -n 4096
