@@ -12,8 +12,10 @@ fi
 
 PATH="$PATH:/Users/janneka/bin"
 PATH="$PATH:/Users/janneka/Dropbox (Personal)/bin"
+PATH="$PATH:/Users/janneka/Dropbox/bin"
 PATH="$PATH:/Library/Frameworks/Mono.framework/Versions/Current/bin"
 PATH="$PATH:/Users/janneka/Library/Android/sdk/platform-tools"
+PATH="$PATH:/Users/janneka/Library/Python/2.7/bin"
 export PATH
 
 export SUBLIME=subl
@@ -34,3 +36,5 @@ export AWS_ENV=dev
 
 export ANDROID_HOME=/Users/janneka/Library/Android/sdk
 export ANSIBLE_VAULT_PASSWORD_FILE=/Users/janneka/.ansible_vault_password
+
+export ERL_AFLAGS="-kernel shell_history enabled"
