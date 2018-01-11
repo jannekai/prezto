@@ -76,8 +76,8 @@ function prompt_janneka_precmd {
   # Define prompts.
   RPROMPT='${editor_info[overwrite]}%(?:: %F{1}⏎%f)${VIM:+" %B%F{6}V%f%b"}'
 
-  if [[ -n "$AWS_ENV" ]]; then
-    RPROMPT+='%F{3}[${AWS_ENV}]%f'
+  if [[ -n "$AWS_PROFILE" ]]; then
+    RPROMPT+='%F{3}[${AWS_PROFILE}]%f'
   fi
 
   # Kill the old process of slow commands if it is still running.
