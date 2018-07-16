@@ -25,5 +25,3 @@ alias rm='nocorrect rm'
 # mix test doesn't understand paths
 compdef -d mix
 ulimit -n 4096
-
-awse sa-dev >/dev/null
