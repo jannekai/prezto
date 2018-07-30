@@ -15,6 +15,7 @@ setopt AUTO_NAME_DIRS
 setopt AUTO_CD
 
 source "/Users/janneka/src/awse/awse.sh"
+source "/Users/janneka/src/eoc/scripts/eoc-env.sh"
 
 fpath=(/usr/local/share/zsh-completions $fpath)
 
