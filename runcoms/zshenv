@@ -18,6 +18,7 @@ PATH="$PATH:/Users/janneka/Library/Android/sdk/platform-tools"
 PATH="$PATH:/Users/janneka/Library/Python/2.7/bin"
 PATH="$PATH:/usr/local/go/bin"
 PATH="$PATH:/Users/janneka/.cargo/bin"
+PATH="$PATH:/Users/janneka/.kiex/elixirs/elixir-1.7.3/bin"
 export PATH
 
 export SUBLIME=subl
@@ -30,8 +31,5 @@ export BOOST_ROOT=/Users/janneka/src/lib/boost
 export HOMEBREW_GITHUB_API_TOKEN=$(cat ~/.auth/homebrew_git_token)
 
 export ANDROID_HOME=/Users/janneka/Library/Android/sdk
-export ANSIBLE_VAULT_PASSWORD_FILE=/Users/janneka/.ansible_vault_password
-
 export ERL_AFLAGS="-kernel shell_history enabled"
-
 export GOPATH=/Users/janneka/src/go
