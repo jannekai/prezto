@@ -14,7 +14,7 @@ fi
 setopt AUTO_NAME_DIRS
 setopt AUTO_CD
 
-source "/Users/janneka/src/awse/awse.sh"
+source "$HOME/src/awse/awse.sh"
 test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"
 
 fpath=(/usr/local/share/zsh-completions $fpath)
